@@ -34,25 +34,27 @@
       text-decoration: none;
       display: block;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background-size: cover;
+      background-position: center;
     }
     .suite-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
     .grimoire {
-      background: #f7f3e9;
-      color: #2b2b2b;
+      background-image: url('./assets/grimoire_card_bg.png');
+      color: white;
       font-family: 'Rock Salt', cursive;
     }
     .cave {
-      background: #000;
+      background-image: url('./assets/the_cave_card_bg.jpg');
       color: #00ff00;
       font-family: 'Courier New', monospace;
     }
     .creator {
-      background: #f5eb33;
-      color: black;
+      background-image: url('./assets/creator_hub_card_bg.png');
       border: 2px solid black;
+      color: black;
       font-family: Arial, sans-serif;
       position: relative;
     }
@@ -68,8 +70,8 @@
       border-bottom: 1px solid black;
     }
     .utility {
-      background: #f3f4f6;
-      color: #1f2937;
+      background-image: url('./assets/utility_card_bg.png');
+      color: white;
       font-family: 'Open Sans', sans-serif;
     }
     footer {
