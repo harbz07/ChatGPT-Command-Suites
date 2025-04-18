@@ -7,9 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const jsonFile = baseName.replace("-", "_") + ".json";
 
   fetch(jsonFile)
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to fetch JSON");
+      return res.json();
+    })
     .then(data => renderEntries(data, containerId))
-    .catch(err => console.error("Failed to load JSON:", err));
+    .catch(err => {
+      document.getElementById(containerId).innerHTML = "<p style='color:red;'>⚠️ Failed to load entries. Check JSON path or formatting.</p>";
+      console.error("Failed to load JSON:", err);
+    });
 });
 
 function renderEntries(entries, containerId) {
@@ -33,7 +39,12 @@ function renderEntries(entries, containerId) {
       if (!card.querySelector(".metadata")) {
         const meta = document.createElement("div");
         meta.className = "metadata";
-        meta.textContent = entry.metadata;
+        meta.innerHTML = `
+          <p><strong>Tone:</strong> ${entry.metadata.tone}</p>
+          <p><strong>Usage:</strong> ${entry.metadata.usage}</p>
+          <p><strong>Output Format:</strong> ${entry.metadata.output_format}</p>
+          <p><strong>Constraint:</strong> ${entry.metadata.constraint}</p>
+        `;
         card.appendChild(meta);
       }
     };
