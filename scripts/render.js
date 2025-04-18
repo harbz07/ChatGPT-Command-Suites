@@ -1,19 +1,19 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("spell-container");
-  if (!container) return;
-
-  const fileMap = {
-    "grimoire.html": "grimoire.json",
-    "the-cave.html": "the_cave.json",
-    "creator-hub.html": "creator_hub.json",
-    "utility.html": "utility.json"
+  const path = location.pathname.split("/").pop();
+  const map = {
+    "grimoire.html": { file: "grimoire.json", target: "spell-container" },
+    "the-cave.html": { file: "the_cave.json", target: "stim-container" },
+    "creator-hub.html": { file: "creator_hub.json", target: "post-container" },
+    "utility.html": { file: "utility.json", target: "command-container" }
   };
 
-  const page = location.pathname.split("/").pop();
-  const jsonFile = fileMap[page];
+  const fallback = { file: "grimoire.json", target: "spell-container" };
+  const { file, target } = map[path] || fallback;
 
-  fetch(jsonFile)
+  const container = document.getElementById(target);
+  if (!container) return;
+
+  fetch(file)
     .then(res => res.json())
     .then(data => {
       data.forEach(entry => {
@@ -38,6 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch(err => {
-      container.textContent = "Failed to load data: " + err.message;
+      container.textContent = "Error loading entries: " + err.message;
     });
 });
