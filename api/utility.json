@@ -1,0 +1,28 @@
+{
+  "title": "Utility",
+  "description": "Snippets, automations, scripts, and tools to make your life easier.",
+  "commands": [
+    {
+      "title": "Metadata Validator",
+      "description": "Analyze a metadata block and return compliance errors or pass/fail status.",
+      "metadata": {
+        "document_type": "tool diagnostic report",
+        "specific_action": "validate metadata",
+        "tone": "neutral",
+        "target_audience": "developers",
+        "min_words": 150
+      }
+    },
+    {
+      "title": "Generate API README",
+      "description": "Write a clear and helpful README for a JSON-based API like this one.",
+      "metadata": {
+        "document_type": "technical documentation",
+        "specific_action": "write usage instructions",
+        "tone": "professional",
+        "target_audience": "technical users",
+        "min_words": 300
+      }
+    }
+  ]
+}

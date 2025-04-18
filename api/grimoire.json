@@ -1,0 +1,28 @@
+{
+  "title": "The Grimoire",
+  "description": "A portal into lore, memory, and metaphysical narrative.",
+  "commands": [
+    {
+      "title": "Summon Lost Myth",
+      "description": "Retrieve a forgotten ancestral story through symbolic narrative.",
+      "metadata": {
+        "document_type": "narrative transmission",
+        "specific_action": "myth weaving",
+        "tone": "enigmatic",
+        "target_audience": "narrative system architects",
+        "min_words": 400
+      }
+    },
+    {
+      "title": "Decode Dream Fragment",
+      "description": "Translate a surreal phrase or symbolic dream into structured meaning.",
+      "metadata": {
+        "document_type": "decoded poetic archive",
+        "specific_action": "symbol extraction",
+        "tone": "dreamlike",
+        "target_audience": "lore engineers",
+        "min_words": 300
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "The Cave",
+  "description": "A terminal into code, dev tools, and systems cracking.",
+  "commands": [
+    {
+      "title": "Hex Dump Ritual",
+      "description": "Generate a stylized, chaotic terminal ritual using ambient code magic.",
+      "metadata": {
+        "document_type": "code spell",
+        "specific_action": "ritualize script",
+        "tone": "esoteric",
+        "target_audience": "cyber mystics",
+        "min_words": 250
+      }
+    },
+    {
+      "title": "Build a Terminal Prompt",
+      "description": "Design a fictional but functional command-line interface prompt.",
+      "metadata": {
+        "document_type": "interface schema",
+        "specific_action": "generate shell mock",
+        "tone": "technical",
+        "target_audience": "aesthetic programmers",
+        "min_words": 300
+      }
+    }
+  ]
+}

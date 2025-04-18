@@ -1,0 +1,28 @@
+{
+  "title": "Creator Hub",
+  "description": "A project incubator for manifesting beautiful and dangerous things.",
+  "commands": [
+    {
+      "title": "Forge a Brand Essence",
+      "description": "Craft a brand essence using mythology, tone language, and archetypal structure.",
+      "metadata": {
+        "document_type": "strategic brand incantation",
+        "specific_action": "essence creation",
+        "tone": "inspiring",
+        "target_audience": "visionary founders",
+        "min_words": 500
+      }
+    },
+    {
+      "title": "Create a Tone Deck",
+      "description": "Define a multi-tone archetype system with example outputs for brand voice.",
+      "metadata": {
+        "document_type": "voice framework",
+        "specific_action": "tone codex synthesis",
+        "tone": "witty intellectual",
+        "target_audience": "brand strategists",
+        "min_words": 400
+      }
+    }
+  ]
+}
