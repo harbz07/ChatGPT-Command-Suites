@@ -1,43 +1,44 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  const path = location.pathname.split("/").pop();
-  const map = {
-    "grimoire.html": { file: "grimoire.json", target: "spell-container" },
-    "the-cave.html": { file: "the_cave.json", target: "stim-container" },
-    "creator-hub.html": { file: "creator_hub.json", target: "post-container" },
-    "utility.html": { file: "utility.json", target: "command-container" }
-  };
+  const containerId = document.querySelector("div[id$='container']")?.id;
+  if (!containerId) return;
 
-  const fallback = { file: "grimoire.json", target: "spell-container" };
-  const { file, target } = map[path] || fallback;
+  const baseName = window.location.pathname.split("/").pop().replace(".html", "");
+  const jsonFile = baseName.replace("-", "_") + ".json";
 
-  const container = document.getElementById(target);
-  if (!container) return;
-
-  fetch(file)
+  fetch(jsonFile)
     .then(res => res.json())
-    .then(data => {
-      data.forEach(entry => {
-        const card = document.createElement("div");
-        card.className = "entry-card";
-
-        const title = document.createElement("h2");
-        title.textContent = entry.name;
-
-        const flavor = document.createElement("p");
-        flavor.className = "flavor";
-        flavor.textContent = entry.flavor;
-
-        const metadata = document.createElement("pre");
-        metadata.className = "metadata";
-        metadata.textContent = entry.metadata;
-
-        card.appendChild(title);
-        card.appendChild(flavor);
-        card.appendChild(metadata);
-        container.appendChild(card);
-      });
-    })
-    .catch(err => {
-      container.textContent = "Error loading entries: " + err.message;
-    });
+    .then(data => renderEntries(data, containerId))
+    .catch(err => console.error("Failed to load JSON:", err));
 });
+
+function renderEntries(entries, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+
+  entries.forEach(entry => {
+    const card = document.createElement("div");
+    card.className = "entry-card";
+
+    card.innerHTML = `
+      <h2>${entry.name}</h2>
+      <p><strong>Category:</strong> ${entry.category}</p>
+      <p><strong>Label:</strong> ${entry.label}</p>
+      <p class="flavor">${entry.flavor}</p>
+    `;
+
+    const metaButton = document.createElement("button");
+    metaButton.textContent = "What does this do?";
+    metaButton.onclick = () => {
+      if (!card.querySelector(".metadata")) {
+        const meta = document.createElement("div");
+        meta.className = "metadata";
+        meta.textContent = entry.metadata;
+        card.appendChild(meta);
+      }
+    };
+
+    card.appendChild(metaButton);
+    container.appendChild(card);
+  });
+}
