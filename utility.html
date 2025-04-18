@@ -1,3 +1,4 @@
+<!-- utility.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +7,55 @@
   <title>Utility</title>
   <style>
     body {
-      margin: 0;
-      padding: 2rem;
       background: #ffffff;
       font-family: 'Open Sans', sans-serif;
       color: #1f2937;
+      padding: 2rem;
     }
-    h1 {
-      text-align: center;
+
+    .entry-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin: 1rem auto;
+      max-width: 700px;
+    }
+
+    .entry-card h2 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .flavor {
+      font-style: italic;
+      color: #666;
+    }
+
+    .metadata {
+      font-family: monospace;
+      font-size: 0.95rem;
+      background: #fff;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      white-space: pre-wrap;
     }
   </style>
 </head>
 <body>
   <h1>Utility</h1>
-  <p style="text-align: center">System tools and functions render here.</p>
+  <div id="command-container"></div>
+  <script>
+    const containerOverride = "command-container";
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById(containerOverride);
+      if (!container) return;
+      const script = document.createElement("script");
+      script.src = "scripts/render.js";
+      document.body.appendChild(script);
+    });
+  </script>
 </body>
 </html>
