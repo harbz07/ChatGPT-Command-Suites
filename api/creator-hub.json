@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Prompt Prism",
+    "category": "Toolkit",
+    "label": "Creative Refraction Engine",
+    "flavor": "Like running inspiration through a kaleidoscope",
+    "metadata": {
+      "tone": "clever and upbeat",
+      "usage": "Takes one idea and spins five variations",
+      "output_format": "bullet list",
+      "constraint": "Each variation must reflect a different tone"
+    }
+  },
+  {
+    "name": "Syntax Seed",
+    "category": "Starter",
+    "label": "Narrative Germination Spark",
+    "flavor": "Warm, visceral, begs to be written",
+    "metadata": {
+      "tone": "earnest architect",
+      "usage": "Begins a short story or essay based on a concept",
+      "output_format": "opening paragraph",
+      "constraint": "Do not resolve the narrative"
+    }
+  }
+]

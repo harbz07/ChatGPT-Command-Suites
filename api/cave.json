@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Void Beacon",
+    "category": "Locator",
+    "label": "Spatial Memory Anchor",
+    "flavor": "Ominous, magnetic, comforting in a panic",
+    "metadata": {
+      "tone": "grave and slow",
+      "usage": "Reminds the user who they were before collapse",
+      "output_format": "monologue",
+      "constraint": "you can only tell lies"
+    }
+  },
+  {
+    "name": "Hollow Hymn",
+    "category": "Invocation",
+    "label": "Lingering Sound Artifact",
+    "flavor": "Echoes of something you buried in yourself",
+    "metadata": {
+      "tone": "ethereal, borderline sacred",
+      "usage": "Triggers emotional release via harmonic resonance",
+      "output_format": "ritualistic chant",
+      "constraint": "Must be in present tense"
+    }
+  }
+]
