@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "name": "The Grimoire",
+      "html": "grimoire.html",
+      "json": "grimoire.json",
+      "container": "spell-container"
+    },
+    {
+      "name": "The Creator Hub",
+      "html": "creator-hub.html",
+      "json": "creator_hub.json",
+      "container": "post-container"
+    },
+    {
+      "name": "The Cave",
+      "html": "the-cave.html",
+      "json": "the_cave.json",
+      "container": "stim-container"
+    },
+    {
+      "name": "Utility",
+      "html": "utility.html",
+      "json": "utility.json",
+      "container": "command-container"
+    }
+  ]
+}
