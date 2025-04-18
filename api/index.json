@@ -4,25 +4,25 @@
       "id": "grimoire",
       "title": "The Grimoire",
       "description": "A portal into lore, memory, and metaphysical narrative.",
-      "path": "/api/grimoire.json"
+      "path": "api/grimoire.json"
     },
     {
       "id": "the_cave",
       "title": "The Cave",
       "description": "A terminal into code, dev tools, and systems cracking.",
-      "path": "/api/the_cave.json"
+      "path": "api/the_cave.json"
     },
     {
       "id": "creator_hub",
       "title": "Creator Hub",
       "description": "A project incubator for manifesting beautiful and dangerous things.",
-      "path": "/api/creator_hub.json"
+      "path": "api/creator_hub.json"
     },
     {
       "id": "utility",
       "title": "Utility",
       "description": "Snippets, automations, scripts, and tools to make your life easier.",
-      "path": "/api/utility.json"
+      "path": "api/utility.json"
     }
   ]
 }
