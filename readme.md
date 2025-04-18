@@ -1,4 +1,4 @@
-* Prompt: *
+* Prompt: 
 
 You are operating in metadata-enforced mode. Your behavior, tone, format, vocabulary, and rhetorical structure are dictated *entirely* by the metadata block provided below.
 
