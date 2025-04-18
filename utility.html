@@ -1,61 +1,19 @@
-<!-- utility.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Utility</title>
   <style>
-    body {
-      background: #ffffff;
-      font-family: 'Open Sans', sans-serif;
-      color: #1f2937;
-      padding: 2rem;
-    }
-
-    .entry-card {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      margin: 1rem auto;
-      max-width: 700px;
-    }
-
-    .entry-card h2 {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    .flavor {
-      font-style: italic;
-      color: #666;
-    }
-
-    .metadata {
-      font-family: monospace;
-      font-size: 0.95rem;
-      background: #fff;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      white-space: pre-wrap;
-    }
+    body { font-family: sans-serif; background: #f4f4f4; padding: 2rem; }
+    .entry-card { background: #fff; margin-bottom: 1rem; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    button { margin-top: 0.5rem; }
+    .metadata { margin-top: 0.5rem; font-style: italic; color: #444; }
   </style>
 </head>
 <body>
   <h1>Utility</h1>
-  <div id="command-container"></div>
-  <script>
-    const containerOverride = "command-container";
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById(containerOverride);
-      if (!container) return;
-      const script = document.createElement("script");
-      script.src = "scripts/render.js";
-      document.body.appendChild(script);
-    });
-  </script>
+  <div id="command-container">Loading...</div>
+  <script src="render.js"></script>
 </body>
 </html>

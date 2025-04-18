@@ -1,47 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Grimoire</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #f7f3e9;
-      font-family: 'Rock Salt', cursive;
-      color: #2b2b2b;
-      padding: 2rem;
-    }
-    .entry-card {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 1rem;
-      padding: 1.25rem;
-      margin: 1rem auto;
-      max-width: 700px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .entry-card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .flavor {
-      font-style: italic;
-      color: #666;
-    }
-    .metadata {
-      white-space: pre-wrap;
-      font-family: monospace;
-      font-size: 0.95rem;
-      background: #f5f5f5;
-      padding: 0.75rem;
-      border-radius: 0.5rem;
-      margin-top: 0.5rem;
-    }
+    body { font-family: sans-serif; background: #f4f4f4; padding: 2rem; }
+    .entry-card { background: #fff; margin-bottom: 1rem; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    button { margin-top: 0.5rem; }
+    .metadata { margin-top: 0.5rem; font-style: italic; color: #444; }
   </style>
 </head>
 <body>
   <h1>The Grimoire</h1>
-  <div id="spell-container"></div>
-  <script src="scripts/render.js"></script>
+  <div id="spell-container">Loading...</div>
+  <script src="render.js"></script>
 </body>
 </html>
