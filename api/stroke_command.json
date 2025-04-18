@@ -1,0 +1,11 @@
+{
+  "title": "stroke(signature prompt)",
+  "description": "The starting file. This creates a reusable prompt that captures a character\u2019s erotic core. You\u2019ll keep coming back to it.",
+  "metadata": {
+    "document_type": "plain text",
+    "specific_action": "Create a text-to-image or LLM-ready prompt that captures a character\u2019s erotic identity. Include visual features, arousal triggers, emotional energy, kinks, and behavioral context. This should feel like the file that ruins you\u2014use precise language, no vagueness. Include character name, setting, tone, and style.",
+    "tone": "neutral",
+    "target_audience": "AI Training & Dataset Prep",
+    "min_words": 300
+  }
+}

@@ -1,28 +1,28 @@
 {
-  "suites": [
+  "pages": [
     {
-      "id": "grimoire",
-      "title": "The Grimoire",
-      "description": "A portal into lore, memory, and metaphysical narrative.",
-      "path": "api/grimoire.json"
+      "name": "The Grimoire",
+      "html": "grimoire.html",
+      "json": "grimoire.json",
+      "container": "spell-container"
     },
     {
-      "id": "the_cave",
-      "title": "The Cave",
-      "description": "A terminal into code, dev tools, and systems cracking.",
-      "path": "api/the_cave.json"
+      "name": "The Creator Hub",
+      "html": "creator-hub.html",
+      "json": "creator_hub.json",
+      "container": "post-container"
     },
     {
-      "id": "creator_hub",
-      "title": "Creator Hub",
-      "description": "A project incubator for manifesting beautiful and dangerous things.",
-      "path": "api/creator_hub.json"
+      "name": "The Cave",
+      "html": "the-cave.html",
+      "json": "the_cave.json",
+      "container": "stim-container"
     },
     {
-      "id": "utility",
-      "title": "Utility",
-      "description": "Snippets, automations, scripts, and tools to make your life easier.",
-      "path": "api/utility.json"
+      "name": "Utility",
+      "html": "utility.html",
+      "json": "utility.json",
+      "container": "command-container"
     }
   ]
 }
