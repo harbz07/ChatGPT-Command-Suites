@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Command Suite Browser</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .suite {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .suite h2 {
+      margin: 0 0 10px 0;
+    }
+    .suite p {
+      margin: 0 0 10px 0;
+    }
+    .suite a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .suite a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Command Suite Index</h1>
+  <div id="suites"></div>
+
+  <script>
+    fetch('/api/index.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('suites');
+        data.suites.forEach(suite => {
+          const div = document.createElement('div');
+          div.className = 'suite';
+          div.innerHTML = `
+            <h2>${suite.title}</h2>
+            <p>${suite.description}</p>
+            <a href="${suite.path}" target="_blank">View JSON</a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById('suites').innerText = 'Failed to load suite index.';
+        console.error('Error loading suite index:', error);
+      });
+  </script>
+</body>
+</html>
